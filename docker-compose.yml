@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  debian-corretto-11:
+    build: 
+      context: ./context
+      args:
+        AMAZON_CORRETTO_URL: https://d3pxv6yz143wms.cloudfront.net/11.0.3.7.1/amazon-corretto-11.0.3.7.1-linux-x64.tar.gz
+        DEBIAN_MIRROR: mirrors.ustc.edu.cn
+    image: debian-corretto-11:latest
